@@ -16,3 +16,7 @@ Datasets used to answer the previous questions:
 | Source 	| Harvard   Dataverse, the source also mentions that it has been assembled from various   official UN sources and other scholars’ datasets [1] 	| Correlates   of War Project. It has also been compiled from various reliable sources such   as the International Monetary Fund (IMS) [2] 	|
 | Justification 	| The   dataset is directly related to the UN countries votes and can be used to   answer the first and second question straightforwardly. As it has the data   related to the votes of each country, and the types of topics of each   session. 	| This   dataset will act as an indicator that might illustrate the financial   interactions between two countries as a mean of correlating this relationship   with the first dataset. 	|
 | Size 	| The   dataset is a 412MB CSV file, that contains around 1.2 million records with 34   quantitative and qualitative variables. 	| The   dataset is 79MB CSV file with around 800 thousand records. It has 23   quantitative and qualitative variables. 	|
+
+# Demo
+Live website will be active until the end of 2021. Loading figures may take time due to limited resources in the free trial provided by Azure.  
+https://datavizappstore.z33.web.core.windows.net/index.html
