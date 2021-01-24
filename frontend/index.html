@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>Visualisation of UNGA Countries Votes</title>
+
+    <!--====== Favicon Icon ======-->
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png"> -->
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/echarts.min.js?_v_=1578303601742"></script>
+
+    <script src="assets/script.js"></script>
+
+    <style>
+    
+    .nav-link{color:black}
+    A:hover {color:white}
+    .nav-link{border-radius:.25rem}.nav-pills .nav-link.active,.nav-pills .show>.nav-link{border-width:10px; border-color: royalblue; background-color: rgba(0, 0, 0, 0.08);}
+    
+    </style>
+</head>
+
+<body>
+    
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== NAVBAR PART START ======-->
+
+    <section class="header-area">
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="#">
+                                <h4 style="color: white;">UNGA Votes Visualisation</h4>
+                            </a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEight" aria-controls="navbarEight" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarEight">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#topic">INTRO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">ABOUT UNGA</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#portfolio">Top Issues</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#pricing">Country's Votes</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#votessimilarity">Votes Similarity</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+        
+        <div id="topic" class="slider-area">
+            <div class="bd-example">
+                <div id="carouselOne" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselOne" data-slide-to="0" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item bg_cover active" style="background-image: url(assets/images/banner2.jpg)">
+                            <div class="carousel-caption">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-10 col-lg-8 col-sm-10" style="background-color: rgba(0, 0, 0, 0.3);">
+                                            <h2 style="padding-top: 2%;" class="carousel-title">What Were the Most Controversial Issues in the World?</h2>
+                                            <p style="color: aliceblue ; padding: 2%;"> Find out How Your Country Voted, and if the votes were similar to other countries! </h2>
+                                            <p style="color: aliceblue ; padding-bottom: 1%;"> Analysis of 700,000 records from the UN General Assembly votes from 1946 to 2018.</h2>
+                                        </div>
+                                    </div> <!-- row -->
+                                </div> <!-- container -->
+                            </div> <!-- carousel caption -->
+                        </div> <!-- carousel-item -->
+                    </div> <!-- carousel-inner -->
+                </div> <!-- carousel -->
+            </div> <!-- bd-example -->
+        </div>
+
+    </section>
+
+    <!--====== NAVBAR PART ENDS ======-->
+    
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about" class="about-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 col-lg-8">
+                    <div class="about-image text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="100">
+                        <img style="height:350px;width:750;" src="assets/images/unga.gif" alt="services">
+                    </div>
+                    <div class="section-title text-center mt-30 pb-40">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.6s">Important Things to Know Before You Start!</h4>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="single-about d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                        <div class="about-icon">
+                            <img src="assets/images/document.png" alt="Icon">
+                        </div>
+                        <div class="about-content media-body">
+                            <h4 class="about-title">Resolutions</h4>
+                            <p class="text">Adopted resolutions are not binding to any country. They are just a way to express a concern or support a cause by a nation.</p>
+                        </div>
+                    </div> <!-- single about -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-about d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.4s">
+                        <div class="about-icon">
+                            <img src="assets/images/support.png" alt="Icon">
+                        </div>
+                        <div class="about-content media-body">
+                            <h4 class="about-title">Voting Mechanism</h4>
+                            <p class="text">One vote per member. Country can vote with "Yes", "No", or "Abstain" from voting.</p>
+                        </div>
+                    </div> <!-- single about -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-about d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.6s">
+                        <div class="about-icon">
+                            <img src="assets/images/question.png" alt="Icon">
+                        </div>
+                        <div class="about-content media-body">
+                            <h4 class="about-title">Topics</h4>
+                            <p class="text">Topics are brought to the table by UNGA members, other UN entities, and the secretary-general.</p>
+                        </div>
+                    </div> <!-- single about -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-about d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.8s">
+                        <div class="about-icon">
+                            <img src="assets/images/place.png" alt="Icon">
+                        </div>
+                        <div class="about-content media-body">
+                            <h4 class="about-title">Meetings</h4>
+                            <p class="text">UNGA members meet every year in September at the UN Headquarters in New York </p>
+                        </div>
+                    </div> <!-- single about -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+    
+    <!--====== portfolio PART START ======-->
+
+    <section id="portfolio" class="portfolio-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title text-center pb-20">
+                        <h3 class="title">Contraversial Issues from 1946-2018</h3>
+                    </div> <!-- row -->
+                </div>
+            </div> <!-- row -->
+            <!-- row -->
+            <div class="row justify-content-center">
+                <div class='tableauPlaceholder' id='viz1578145942897' style='position: relative'><noscript><a href='#'><img alt=' '
+                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;datastory_15781452669230&#47;Story1&#47;1_rss.png'
+                                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='datastory_15781452669230&#47;Story1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image'
+                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;datastory_15781452669230&#47;Story1&#47;1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' /></object></div>
+                <script
+                    type='text/javascript'>                    var divElement = document.getElementById('viz1578145942897'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = '627px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-12 ">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" ">
+                        <li style="background-color:#81559B;border-radius: 5px;margin-left: 4px; margin-top: 5px;"class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-IP" role="tab"
+                                aria-controls="pills-home" aria-selected="true">Israeli-Palestinian Conflict</a>
+                        </li>
+                        <li style="background-color:#FCEC71;border-radius: 5px;margin-left: 4px; margin-top: 5px;" class="nav-item">
+                            <a class="nav-link " id="pills-profile-tab" data-toggle="pill" href="#pills-NW" role="tab"
+                                aria-controls="pills-profile" aria-selected="false">Neclear Weapons</a>
+                        </li>
+                        <li style="background-color:#709ECC; border-radius: 5px;margin-left: 4px;margin-top: 5px;" class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-HR" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">Human Rights</a>
+                        </li>
+                        <li style="background-color:#C29979; border-radius: 5px;margin-left: 4px;margin-top: 5px;" class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-AC" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">Arms Control</a>
+                        </li>
+                        <li style="background-color:#B3E57E; border-radius: 5px;margin-left: 4px;margin-top: 5px;" class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-ED" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">Economic Development</a>
+                        </li>
+                        <li style="background-color:#F2906D; border-radius: 5px;margin-left: 4px;margin-top: 5px;" class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-CO" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">Colonoliasm</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-IP" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <p>Started in the late 1940s, the Israeli-Palestinian conflict is considered to be one of the most debatable topics at the UNGA voting data. The dataset shows that it accounts for around 25% of UNGA votes. 
+                             Examples for the UNGA resolutions related to this ongoing conflict include the call to stop the building of new Israeli settlements on the Palestinian land, cessation of the Isreali occupation, and several demands calling for peace between the two parties.
+                            </p>
+                            <img style="margin-left:25%" src="assets/images/IP.png">
+                        </div>
+                        <div class="tab-pane fade" id="pills-NW" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <p>Since its establishment, the UN endeavoured for a world free of nuclear weapons due to its inherent danger on the whole globe. 
+                                The disarmament of nuclear weapons and the ban of using it for military purposes are two examples of the resolutions under this category.
+                            </p>
+                            <img style="margin-left:25%" src="assets/images/NW.png">
+                        </div>
+                        <div class="tab-pane fade" id="pills-HR" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <p>Officially announced on 10 December 1948, The Universal Declaration of Human Rights (UDHR) sets the foundations for all the practices that human beings all over the world should be treated with.
+                                Article 2 of UDHR emphasises the appliance of the declared rules on all people regardless of their race, gender, religion, political opinion and any other types of discrimination.
+                                The UNGA resolutions revolve around applying the concepts declared in UDHR, or other conventions such as the Convention on the Elimination of All Forms of Discrimination Against Women (CEDAW). Other resolutions discussed might be related to specific countries.
+                            </p>
+                            <img style="margin-left:25%" src="assets/images/HR.png">
+                        </div>
+                        <div class="tab-pane fade" id="pills-AC" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <p>
+                                Similar in nature to the nuclear weapons resolutions, Arms Control resolutions focus on stopping the proliferation and development of hazardous biological and chemical weapons. 
+                            </p>
+                            <img style="margin-left:25%" src="assets/images/AC.png">
+                        </div>
+                        <div class="tab-pane fade" id="pills-ED" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <p>Resolutions discussing economic growth, international trade between countries, poverty eradication, and finance for development.
+                                It is also involved in advocating the rights of workers (especially women) in the workplace </p>
+                            <img style="margin-left:25%" src="assets/images/ED.png">
+                        </div>
+                        <div class="tab-pane fade" id="pills-CO" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            Driven by the principles of "equal rights and self-determination of all people", the UNGA, successfully adopted the Declaration on Decolonization in 1960 that advocates for the rights of dependent countries. 
+                            Currently, there are still 17 non-self governing territories remaining. The UNGA closely monitors these places and ensures that the administrative of that territory follows the rules and submit continuous reports on their state.
+                            <img style="margin-left:25%" src="assets/images/CO.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+
+    <!--====== portfolio PART ENDS ======-->
+    <!--====== PRINICNG STYLE EIGHT START ======-->
+
+    <section id="pricing" class="pricing-area">
+        <div class="container">
+            <div class="row justify-content-center" style="margin-bottom: 2%;">
+                <div class="col-lg-12">
+                    <div class="section-title text-center pb-20">
+                        <h3 class="title">Votes of Country by Resolution Type</h3>
+                    </div> <!-- section title -->
+                </div>
+                <div class="col offset-lg-1">
+                    <form id="country_votes" method="get">
+                        <div class="form-input">
+                            <select onchange="submitDataCountryChart(this.value)" name="country_votes_code" class="form-control" id="country_votes_select">
+                                <option value="null">Select a Country</option>
+                                <option value="2">United States of America</option>
+                                <option value="20">Canada</option>
+                                <option value="31">Bahamas</option>
+                                <option value="40">Cuba</option>
+                                <option value="41">Haiti</option>
+                                <option value="42">Dominican Republic</option>
+                                <option value="51">Jamaica</option>
+                                <option value="52">Trinidad and Tobago</option>
+                                <option value="53">Barbados</option>
+                                <option value="54">Dominica</option>
+                                <option value="55">Grenada</option>
+                                <option value="56">Saint Lucia</option>
+                                <option value="57">Saint Vincent and the Grenadines</option>
+                                <option value="58">Antigua and Barbuda</option>
+                                <option value="60">Saint Kitts and Nevis</option>
+                                <option value="70">Mexico</option>
+                                <option value="80">Belize</option>
+                                <option value="90">Guatemala</option>
+                                <option value="91">Honduras</option>
+                                <option value="92">El Salvador</option>
+                                <option value="93">Nicaragua</option>
+                                <option value="94">Costa Rica</option>
+                                <option value="95">Panama</option>
+                                <option value="100">Colombia</option>
+                                <option value="101">Venezuela, Bolivarian Republic of</option>
+                                <option value="110">Guyana</option>
+                                <option value="115">Suriname</option>
+                                <option value="130">Ecuador</option>
+                                <option value="135">Peru</option>
+                                <option value="140">Brazil</option>
+                                <option value="145">Bolivia (Plurinational State of)</option>
+                                <option value="150">Paraguay</option>
+                                <option value="155">Chile</option>
+                                <option value="160">Argentina</option>
+                                <option value="165">Uruguay</option>
+                                <option value="200">United Kingdom of Great Britain and Northern Ireland</option>
+                                <option value="205">Ireland</option>
+                                <option value="210">Netherlands</option>
+                                <option value="211">Belgium</option>
+                                <option value="212">Luxembourg</option>
+                                <option value="220">France</option>
+                                <option value="221">Monaco</option>
+                                <option value="223">Liechtenstein</option>
+                                <option value="225">Switzerland</option>
+                                <option value="230">Spain</option>
+                                <option value="232">Andorra</option>
+                                <option value="235">Portugal</option>
+                                <option value="265">German Democratic Republic</option>
+                                <option value="290">Poland</option>
+                                <option value="305">Austria</option>
+                                <option value="310">Hungary</option>
+                                <option value="315">Czechoslovakia</option>
+                                <option value="316">Czech Republic</option>
+                                <option value="317">Slovakia</option>
+                                <option value="325">Italy</option>
+                                <option value="331">San Marino</option>
+                                <option value="338">Malta</option>
+                                <option value="339">Albania</option>
+                                <option value="343">The former Yugoslav Republic of Macedonia</option>
+                                <option value="344">Croatia</option>
+                                <option value="346">Bosnia and Herzegovina</option>
+                                <option value="349">Slovenia</option>
+                                <option value="350">Greece</option>
+                                <option value="352">Cyprus</option>
+                                <option value="355">Bulgaria</option>
+                                <option value="359">Republic of Moldova</option>
+                                <option value="360">Romania</option>
+                                <option value="365">Russian Federation</option>
+                                <option value="366">Estonia</option>
+                                <option value="367">Latvia</option>
+                                <option value="368">Lithuania</option>
+                                <option value="369">Ukraine</option>
+                                <option value="370">Belarus</option>
+                                <option value="371">Armenia</option>
+                                <option value="372">Georgia</option>
+                                <option value="373">Azerbaijan</option>
+                                <option value="375">Finland</option>
+                                <option value="380">Sweden</option>
+                                <option value="385">Norway</option>
+                                <option value="390">Denmark</option>
+                                <option value="395">Iceland</option>
+                                <option value="402">Cabo Verde</option>
+                                <option value="403">Sao Tome and Principe</option>
+                                <option value="404">Guinea Bissau</option>
+                                <option value="411">Equatorial Guinea</option>
+                                <option value="420">Gambia (Islamic Republic of the)</option>
+                                <option value="432">Mali</option>
+                                <option value="433">Senegal</option>
+                                <option value="434">Benin</option>
+                                <option value="435">Mauritania</option>
+                                <option value="436">Niger</option>
+                                <option value="437">Côte D'Ivoire</option>
+                                <option value="438">Guinea</option>
+                                <option value="439">Burkina Faso</option>
+                                <option value="450">Liberia</option>
+                                <option value="451">Sierra Leone</option>
+                                <option value="452">Ghana</option>
+                                <option value="461">Togo</option>
+                                <option value="471">Cameroon</option>
+                                <option value="475">Nigeria</option>
+                                <option value="481">Gabon</option>
+                                <option value="482">Central African Republic</option>
+                                <option value="483">Chad</option>
+                                <option value="484">Congo</option>
+                                <option value="490">Democratic Republic of the Congo</option>
+                                <option value="500">Uganda</option>
+                                <option value="501">Kenya</option>
+                                <option value="510">United Republic of Tanzania</option>
+                                <option value="511">Zanzibar</option>
+                                <option value="516">Burundi</option>
+                                <option value="517">Rwanda</option>
+                                <option value="520">Somalia</option>
+                                <option value="522">Djibouti</option>
+                                <option value="530">Ethiopia</option>
+                                <option value="531">Eritrea</option>
+                                <option value="540">Angola</option>
+                                <option value="541">Mozambique</option>
+                                <option value="551">Zambia</option>
+                                <option value="552">Zimbabwe</option>
+                                <option value="553">Malawi</option>
+                                <option value="560">South Africa</option>
+                                <option value="565">Namibia</option>
+                                <option value="570">Lesotho</option>
+                                <option value="571">Botswana</option>
+                                <option value="572">Swaziland</option>
+                                <option value="580">Madagascar</option>
+                                <option value="581">Comoros</option>
+                                <option value="590">Mauritius</option>
+                                <option value="591">Seychelles</option>
+                                <option value="600">Morocco</option>
+                                <option value="615">Algeria</option>
+                                <option value="616">Tunisia</option>
+                                <option value="620">Libya</option>
+                                <option value="625">Sudan</option>
+                                <option value="626">South Sudan</option>
+                                <option value="630">Iran (Islamic Republic of)</option>
+                                <option value="640">Turkey</option>
+                                <option value="645">Iraq</option>
+                                <option value="651">Egypt</option>
+                                <option value="652">Syrian Arab Republic</option>
+                                <option value="660">Lebanon</option>
+                                <option value="663">Jordan</option>
+                                <option value="666">Israel</option>
+                                <option value="670">Saudi Arabia</option>
+                                <option value="678">Yemen Arab Republic</option>
+                                <option value="680">Yemen People's Republic</option>
+                                <option value="690">Kuwait</option>
+                                <option value="692">Bahrain</option>
+                                <option value="694">Qatar</option>
+                                <option value="696">United Arab Emirates</option>
+                                <option value="698">Oman</option>
+                                <option value="700">Afghanistan</option>
+                                <option value="701">Turkmenistan</option>
+                                <option value="702">Tajikistan</option>
+                                <option value="703">Kyrgyzstan</option>
+                                <option value="704">Uzbekistan</option>
+                                <option value="705">Kazakhstan</option>
+                                <option value="710">China</option>
+                                <option value="712">Mongolia</option>
+                                <option value="713">Taiwan, Province of China</option>
+                                <option value="731">Democratic People's Republic of Korea</option>
+                                <option value="732">Republic of Korea</option>
+                                <option value="740">Japan</option>
+                                <option value="750">India</option>
+                                <option value="760">Bhutan</option>
+                                <option value="770">Pakistan</option>
+                                <option value="771">Bangladesh</option>
+                                <option value="775">Myanmar</option>
+                                <option value="780">Sri Lanka</option>
+                                <option value="781">Maldives</option>
+                                <option value="790">Nepal</option>
+                                <option value="800">Thailand</option>
+                                <option value="811">Cambodia</option>
+                                <option value="812">Lao People's Democratic Republic</option>
+                                <option value="816">Viet Nam</option>
+                                <option value="820">Malaysia</option>
+                                <option value="830">Singapore</option>
+                                <option value="835">Brunei Darussalam</option>
+                                <option value="840">Philippines</option>
+                                <option value="850">Indonesia</option>
+                                <option value="860">Timor-Leste</option>
+                                <option value="900">Australia</option>
+                                <option value="910">Papua New Guinea</option>
+                                <option value="920">New Zealand</option>
+                                <option value="935">Vanuatu</option>
+                                <option value="940">Solomon Islands</option>
+                                <option value="946">Kiribati</option>
+                                <option value="947">Tuvalu</option>
+                                <option value="950">Fiji</option>
+                                <option value="955">Tonga</option>
+                                <option value="970">Nauru</option>
+                                <option value="983">Marshall Islands</option>
+                                <option value="986">Palau</option>
+                                <option value="987">Micronesia (Federated States of)</option>
+                                <option value="990">Samoa</option>
+                                <option value="260">Germany</option>
+                                <option value="679">Yemen</option>
+                                <option value="341">Montenegro</option>
+                                <option value="345">Serbia</option>
+                            </select>
+                        </div> <!-- form input -->
+                    </form>
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div id="bar_chart_country" hidden style="width:600px;height:600px;margin-top: 50px;" class="col-lg-8 col-md-7 col-sm-9">
+                    
+                </div>
+                <div id="insigts_bar_chart" hidden class="col-lg-4 col-md-7 col-sm-9">
+                    <div class="pricing-style-one mt-50">
+                        <div class="about-icon" style="width:40px;height:40px">
+                            <img src="assets/images/fight.png" alt="Icon">
+                        </div>
+                        <p>IP - Israeli-Palestinian Conflict</p>
+                        <br>
+                        <div class="about-icon" style="width:40px;height:40px">
+                            <img src="assets/images/nuclear.png" alt="Icon">
+                        </div>
+                        <p>NW - Nuclear Weapons</p>
+                        <br>
+                        <div class="about-icon" style="width:40px;height:40px">
+                            <img src="assets/images/law.png" alt="Icon">
+                        </div>
+                        <p>HR - Human Rights</p>
+                        <br>
+                        <div class="about-icon" style="width:40px;height:40px">
+                            <img src="assets/images/firearm.png" alt="Icon">
+                        </div>
+                        <p>AC - Arms Control</p>
+                        <br>
+                        <div class="about-icon" style="width:40px;height:40px">
+                            <img src="assets/images/rise.png" alt="Icon">
+                        </div>
+                        <p>ED - Economic Development</p>
+                        <br>
+                        <div class="about-icon" style="width:40px;height:40px">
+                            <img src="assets/images/crime.png" alt="Icon">
+                        </div>
+                        <p>CO - Colonoliasm</p>
+                    </div> <!-- pricing style one -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== PRINICNG STYLE EIGHT ENDS ======-->   
+    <!--====== PRINICNG STYLE EIGHT START ======-->
+
+    <section id="votessimilarity" class="portfolio-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section-title text-center pb-20">
+                        <h3 class="title">Votes Similarity vs Trade Volume</h3>
+                        <p class="text">Find if the votes of your country were similar to other nations</p>
+                        <p class="text">Is there a relationship between the trade volume and votes similarity?</p>
+                    </div> <!-- section title -->
+                </div>
+                <div class="col-lg-9 offset-lg-2">
+                    <form id="similarity_form" class="form-inline" method="get">
+                        <div class="form-input" style="margin-right: 10px;">
+                            <select name="ccode1" class="form-control" id="sel1">
+                                <option value="null">First Country</option>
+                                    <option value="2">United States of America</option>
+                                    <option value="20">Canada</option>
+                                    <option value="31">Bahamas</option>
+                                    <option value="40">Cuba</option>
+                                    <option value="41">Haiti</option>
+                                    <option value="42">Dominican Republic</option>
+                                    <option value="51">Jamaica</option>
+                                    <option value="52">Trinidad and Tobago</option>
+                                    <option value="53">Barbados</option>
+                                    <option value="54">Dominica</option>
+                                    <option value="55">Grenada</option>
+                                    <option value="56">Saint Lucia</option>
+                                    <option value="57">Saint Vincent and the Grenadines</option>
+                                    <option value="58">Antigua and Barbuda</option>
+                                    <option value="60">Saint Kitts and Nevis</option>
+                                    <option value="70">Mexico</option>
+                                    <option value="80">Belize</option>
+                                    <option value="90">Guatemala</option>
+                                    <option value="91">Honduras</option>
+                                    <option value="92">El Salvador</option>
+                                    <option value="93">Nicaragua</option>
+                                    <option value="94">Costa Rica</option>
+                                    <option value="95">Panama</option>
+                                    <option value="100">Colombia</option>
+                                    <option value="101">Venezuela, Bolivarian Republic of</option>
+                                    <option value="110">Guyana</option>
+                                    <option value="115">Suriname</option>
+                                    <option value="130">Ecuador</option>
+                                    <option value="135">Peru</option>
+                                    <option value="140">Brazil</option>
+                                    <option value="145">Bolivia (Plurinational State of)</option>
+                                    <option value="150">Paraguay</option>
+                                    <option value="155">Chile</option>
+                                    <option value="160">Argentina</option>
+                                    <option value="165">Uruguay</option>
+                                    <option value="200">United Kingdom of Great Britain and Northern Ireland</option>
+                                    <option value="205">Ireland</option>
+                                    <option value="210">Netherlands</option>
+                                    <option value="211">Belgium</option>
+                                    <option value="212">Luxembourg</option>
+                                    <option value="220">France</option>
+                                    <option value="221">Monaco</option>
+                                    <option value="223">Liechtenstein</option>
+                                    <option value="225">Switzerland</option>
+                                    <option value="230">Spain</option>
+                                    <option value="232">Andorra</option>
+                                    <option value="235">Portugal</option>
+                                    <option value="265">German Democratic Republic</option>
+                                    <option value="290">Poland</option>
+                                    <option value="305">Austria</option>
+                                    <option value="310">Hungary</option>
+                                    <option value="315">Czechoslovakia</option>
+                                    <option value="316">Czech Republic</option>
+                                    <option value="317">Slovakia</option>
+                                    <option value="325">Italy</option>
+                                    <option value="331">San Marino</option>
+                                    <option value="338">Malta</option>
+                                    <option value="339">Albania</option>
+                                    <option value="343">The former Yugoslav Republic of Macedonia</option>
+                                    <option value="344">Croatia</option>
+                                    <option value="346">Bosnia and Herzegovina</option>
+                                    <option value="349">Slovenia</option>
+                                    <option value="350">Greece</option>
+                                    <option value="352">Cyprus</option>
+                                    <option value="355">Bulgaria</option>
+                                    <option value="359">Republic of Moldova</option>
+                                    <option value="360">Romania</option>
+                                    <option value="365">Russian Federation</option>
+                                    <option value="366">Estonia</option>
+                                    <option value="367">Latvia</option>
+                                    <option value="368">Lithuania</option>
+                                    <option value="369">Ukraine</option>
+                                    <option value="370">Belarus</option>
+                                    <option value="371">Armenia</option>
+                                    <option value="372">Georgia</option>
+                                    <option value="373">Azerbaijan</option>
+                                    <option value="375">Finland</option>
+                                    <option value="380">Sweden</option>
+                                    <option value="385">Norway</option>
+                                    <option value="390">Denmark</option>
+                                    <option value="395">Iceland</option>
+                                    <option value="402">Cabo Verde</option>
+                                    <option value="403">Sao Tome and Principe</option>
+                                    <option value="404">Guinea Bissau</option>
+                                    <option value="411">Equatorial Guinea</option>
+                                    <option value="420">Gambia (Islamic Republic of the)</option>
+                                    <option value="432">Mali</option>
+                                    <option value="433">Senegal</option>
+                                    <option value="434">Benin</option>
+                                    <option value="435">Mauritania</option>
+                                    <option value="436">Niger</option>
+                                    <option value="437">Côte D'Ivoire</option>
+                                    <option value="438">Guinea</option>
+                                    <option value="439">Burkina Faso</option>
+                                    <option value="450">Liberia</option>
+                                    <option value="451">Sierra Leone</option>
+                                    <option value="452">Ghana</option>
+                                    <option value="461">Togo</option>
+                                    <option value="471">Cameroon</option>
+                                    <option value="475">Nigeria</option>
+                                    <option value="481">Gabon</option>
+                                    <option value="482">Central African Republic</option>
+                                    <option value="483">Chad</option>
+                                    <option value="484">Congo</option>
+                                    <option value="490">Democratic Republic of the Congo</option>
+                                    <option value="500">Uganda</option>
+                                    <option value="501">Kenya</option>
+                                    <option value="510">United Republic of Tanzania</option>
+                                    <option value="511">Zanzibar</option>
+                                    <option value="516">Burundi</option>
+                                    <option value="517">Rwanda</option>
+                                    <option value="520">Somalia</option>
+                                    <option value="522">Djibouti</option>
+                                    <option value="530">Ethiopia</option>
+                                    <option value="531">Eritrea</option>
+                                    <option value="540">Angola</option>
+                                    <option value="541">Mozambique</option>
+                                    <option value="551">Zambia</option>
+                                    <option value="552">Zimbabwe</option>
+                                    <option value="553">Malawi</option>
+                                    <option value="560">South Africa</option>
+                                    <option value="565">Namibia</option>
+                                    <option value="570">Lesotho</option>
+                                    <option value="571">Botswana</option>
+                                    <option value="572">Swaziland</option>
+                                    <option value="580">Madagascar</option>
+                                    <option value="581">Comoros</option>
+                                    <option value="590">Mauritius</option>
+                                    <option value="591">Seychelles</option>
+                                    <option value="600">Morocco</option>
+                                    <option value="615">Algeria</option>
+                                    <option value="616">Tunisia</option>
+                                    <option value="620">Libya</option>
+                                    <option value="625">Sudan</option>
+                                    <option value="626">South Sudan</option>
+                                    <option value="630">Iran (Islamic Republic of)</option>
+                                    <option value="640">Turkey</option>
+                                    <option value="645">Iraq</option>
+                                    <option value="651">Egypt</option>
+                                    <option value="652">Syrian Arab Republic</option>
+                                    <option value="660">Lebanon</option>
+                                    <option value="663">Jordan</option>
+                                    <option value="666">Israel</option>
+                                    <option value="670">Saudi Arabia</option>
+                                    <option value="678">Yemen Arab Republic</option>
+                                    <option value="680">Yemen People's Republic</option>
+                                    <option value="690">Kuwait</option>
+                                    <option value="692">Bahrain</option>
+                                    <option value="694">Qatar</option>
+                                    <option value="696">United Arab Emirates</option>
+                                    <option value="698">Oman</option>
+                                    <option value="700">Afghanistan</option>
+                                    <option value="701">Turkmenistan</option>
+                                    <option value="702">Tajikistan</option>
+                                    <option value="703">Kyrgyzstan</option>
+                                    <option value="704">Uzbekistan</option>
+                                    <option value="705">Kazakhstan</option>
+                                    <option value="710">China</option>
+                                    <option value="712">Mongolia</option>
+                                    <option value="713">Taiwan, Province of China</option>
+                                    <option value="731">Democratic People's Republic of Korea</option>
+                                    <option value="732">Republic of Korea</option>
+                                    <option value="740">Japan</option>
+                                    <option value="750">India</option>
+                                    <option value="760">Bhutan</option>
+                                    <option value="770">Pakistan</option>
+                                    <option value="771">Bangladesh</option>
+                                    <option value="775">Myanmar</option>
+                                    <option value="780">Sri Lanka</option>
+                                    <option value="781">Maldives</option>
+                                    <option value="790">Nepal</option>
+                                    <option value="800">Thailand</option>
+                                    <option value="811">Cambodia</option>
+                                    <option value="812">Lao People's Democratic Republic</option>
+                                    <option value="816">Viet Nam</option>
+                                    <option value="820">Malaysia</option>
+                                    <option value="830">Singapore</option>
+                                    <option value="835">Brunei Darussalam</option>
+                                    <option value="840">Philippines</option>
+                                    <option value="850">Indonesia</option>
+                                    <option value="860">Timor-Leste</option>
+                                    <option value="900">Australia</option>
+                                    <option value="910">Papua New Guinea</option>
+                                    <option value="920">New Zealand</option>
+                                    <option value="935">Vanuatu</option>
+                                    <option value="940">Solomon Islands</option>
+                                    <option value="946">Kiribati</option>
+                                    <option value="947">Tuvalu</option>
+                                    <option value="950">Fiji</option>
+                                    <option value="955">Tonga</option>
+                                    <option value="970">Nauru</option>
+                                    <option value="983">Marshall Islands</option>
+                                    <option value="986">Palau</option>
+                                    <option value="987">Micronesia (Federated States of)</option>
+                                    <option value="990">Samoa</option>
+                                    <option value="260">Germany</option>
+                                    <option value="679">Yemen</option>
+                                    <option value="341">Montenegro</option>
+                                    <option value="345">Serbia</option>
+                            </select>
+                        </div> <!-- form input -->
+                        <div class="form-input" style="margin-right: 10px;">
+                                <select name="ccode1" class="form-control" id="sel2">
+                                    <option value="null">Second Country</option>
+                                    <option value="2">United States of America</option>
+                                    <option value="20">Canada</option>
+                                    <option value="31">Bahamas</option>
+                                    <option value="40">Cuba</option>
+                                    <option value="41">Haiti</option>
+                                    <option value="42">Dominican Republic</option>
+                                    <option value="51">Jamaica</option>
+                                    <option value="52">Trinidad and Tobago</option>
+                                    <option value="53">Barbados</option>
+                                    <option value="54">Dominica</option>
+                                    <option value="55">Grenada</option>
+                                    <option value="56">Saint Lucia</option>
+                                    <option value="57">Saint Vincent and the Grenadines</option>
+                                    <option value="58">Antigua and Barbuda</option>
+                                    <option value="60">Saint Kitts and Nevis</option>
+                                    <option value="70">Mexico</option>
+                                    <option value="80">Belize</option>
+                                    <option value="90">Guatemala</option>
+                                    <option value="91">Honduras</option>
+                                    <option value="92">El Salvador</option>
+                                    <option value="93">Nicaragua</option>
+                                    <option value="94">Costa Rica</option>
+                                    <option value="95">Panama</option>
+                                    <option value="100">Colombia</option>
+                                    <option value="101">Venezuela, Bolivarian Republic of</option>
+                                    <option value="110">Guyana</option>
+                                    <option value="115">Suriname</option>
+                                    <option value="130">Ecuador</option>
+                                    <option value="135">Peru</option>
+                                    <option value="140">Brazil</option>
+                                    <option value="145">Bolivia (Plurinational State of)</option>
+                                    <option value="150">Paraguay</option>
+                                    <option value="155">Chile</option>
+                                    <option value="160">Argentina</option>
+                                    <option value="165">Uruguay</option>
+                                    <option value="200">United Kingdom of Great Britain and Northern Ireland</option>
+                                    <option value="205">Ireland</option>
+                                    <option value="210">Netherlands</option>
+                                    <option value="211">Belgium</option>
+                                    <option value="212">Luxembourg</option>
+                                    <option value="220">France</option>
+                                    <option value="221">Monaco</option>
+                                    <option value="223">Liechtenstein</option>
+                                    <option value="225">Switzerland</option>
+                                    <option value="230">Spain</option>
+                                    <option value="232">Andorra</option>
+                                    <option value="235">Portugal</option>
+                                    <option value="265">German Democratic Republic</option>
+                                    <option value="290">Poland</option>
+                                    <option value="305">Austria</option>
+                                    <option value="310">Hungary</option>
+                                    <option value="315">Czechoslovakia</option>
+                                    <option value="316">Czech Republic</option>
+                                    <option value="317">Slovakia</option>
+                                    <option value="325">Italy</option>
+                                    <option value="331">San Marino</option>
+                                    <option value="338">Malta</option>
+                                    <option value="339">Albania</option>
+                                    <option value="343">The former Yugoslav Republic of Macedonia</option>
+                                    <option value="344">Croatia</option>
+                                    <option value="346">Bosnia and Herzegovina</option>
+                                    <option value="349">Slovenia</option>
+                                    <option value="350">Greece</option>
+                                    <option value="352">Cyprus</option>
+                                    <option value="355">Bulgaria</option>
+                                    <option value="359">Republic of Moldova</option>
+                                    <option value="360">Romania</option>
+                                    <option value="365">Russian Federation</option>
+                                    <option value="366">Estonia</option>
+                                    <option value="367">Latvia</option>
+                                    <option value="368">Lithuania</option>
+                                    <option value="369">Ukraine</option>
+                                    <option value="370">Belarus</option>
+                                    <option value="371">Armenia</option>
+                                    <option value="372">Georgia</option>
+                                    <option value="373">Azerbaijan</option>
+                                    <option value="375">Finland</option>
+                                    <option value="380">Sweden</option>
+                                    <option value="385">Norway</option>
+                                    <option value="390">Denmark</option>
+                                    <option value="395">Iceland</option>
+                                    <option value="402">Cabo Verde</option>
+                                    <option value="403">Sao Tome and Principe</option>
+                                    <option value="404">Guinea Bissau</option>
+                                    <option value="411">Equatorial Guinea</option>
+                                    <option value="420">Gambia (Islamic Republic of the)</option>
+                                    <option value="432">Mali</option>
+                                    <option value="433">Senegal</option>
+                                    <option value="434">Benin</option>
+                                    <option value="435">Mauritania</option>
+                                    <option value="436">Niger</option>
+                                    <option value="437">Côte D'Ivoire</option>
+                                    <option value="438">Guinea</option>
+                                    <option value="439">Burkina Faso</option>
+                                    <option value="450">Liberia</option>
+                                    <option value="451">Sierra Leone</option>
+                                    <option value="452">Ghana</option>
+                                    <option value="461">Togo</option>
+                                    <option value="471">Cameroon</option>
+                                    <option value="475">Nigeria</option>
+                                    <option value="481">Gabon</option>
+                                    <option value="482">Central African Republic</option>
+                                    <option value="483">Chad</option>
+                                    <option value="484">Congo</option>
+                                    <option value="490">Democratic Republic of the Congo</option>
+                                    <option value="500">Uganda</option>
+                                    <option value="501">Kenya</option>
+                                    <option value="510">United Republic of Tanzania</option>
+                                    <option value="511">Zanzibar</option>
+                                    <option value="516">Burundi</option>
+                                    <option value="517">Rwanda</option>
+                                    <option value="520">Somalia</option>
+                                    <option value="522">Djibouti</option>
+                                    <option value="530">Ethiopia</option>
+                                    <option value="531">Eritrea</option>
+                                    <option value="540">Angola</option>
+                                    <option value="541">Mozambique</option>
+                                    <option value="551">Zambia</option>
+                                    <option value="552">Zimbabwe</option>
+                                    <option value="553">Malawi</option>
+                                    <option value="560">South Africa</option>
+                                    <option value="565">Namibia</option>
+                                    <option value="570">Lesotho</option>
+                                    <option value="571">Botswana</option>
+                                    <option value="572">Swaziland</option>
+                                    <option value="580">Madagascar</option>
+                                    <option value="581">Comoros</option>
+                                    <option value="590">Mauritius</option>
+                                    <option value="591">Seychelles</option>
+                                    <option value="600">Morocco</option>
+                                    <option value="615">Algeria</option>
+                                    <option value="616">Tunisia</option>
+                                    <option value="620">Libya</option>
+                                    <option value="625">Sudan</option>
+                                    <option value="626">South Sudan</option>
+                                    <option value="630">Iran (Islamic Republic of)</option>
+                                    <option value="640">Turkey</option>
+                                    <option value="645">Iraq</option>
+                                    <option value="651">Egypt</option>
+                                    <option value="652">Syrian Arab Republic</option>
+                                    <option value="660">Lebanon</option>
+                                    <option value="663">Jordan</option>
+                                    <option value="666">Israel</option>
+                                    <option value="670">Saudi Arabia</option>
+                                    <option value="678">Yemen Arab Republic</option>
+                                    <option value="680">Yemen People's Republic</option>
+                                    <option value="690">Kuwait</option>
+                                    <option value="692">Bahrain</option>
+                                    <option value="694">Qatar</option>
+                                    <option value="696">United Arab Emirates</option>
+                                    <option value="698">Oman</option>
+                                    <option value="700">Afghanistan</option>
+                                    <option value="701">Turkmenistan</option>
+                                    <option value="702">Tajikistan</option>
+                                    <option value="703">Kyrgyzstan</option>
+                                    <option value="704">Uzbekistan</option>
+                                    <option value="705">Kazakhstan</option>
+                                    <option value="710">China</option>
+                                    <option value="712">Mongolia</option>
+                                    <option value="713">Taiwan, Province of China</option>
+                                    <option value="731">Democratic People's Republic of Korea</option>
+                                    <option value="732">Republic of Korea</option>
+                                    <option value="740">Japan</option>
+                                    <option value="750">India</option>
+                                    <option value="760">Bhutan</option>
+                                    <option value="770">Pakistan</option>
+                                    <option value="771">Bangladesh</option>
+                                    <option value="775">Myanmar</option>
+                                    <option value="780">Sri Lanka</option>
+                                    <option value="781">Maldives</option>
+                                    <option value="790">Nepal</option>
+                                    <option value="800">Thailand</option>
+                                    <option value="811">Cambodia</option>
+                                    <option value="812">Lao People's Democratic Republic</option>
+                                    <option value="816">Viet Nam</option>
+                                    <option value="820">Malaysia</option>
+                                    <option value="830">Singapore</option>
+                                    <option value="835">Brunei Darussalam</option>
+                                    <option value="840">Philippines</option>
+                                    <option value="850">Indonesia</option>
+                                    <option value="860">Timor-Leste</option>
+                                    <option value="900">Australia</option>
+                                    <option value="910">Papua New Guinea</option>
+                                    <option value="920">New Zealand</option>
+                                    <option value="935">Vanuatu</option>
+                                    <option value="940">Solomon Islands</option>
+                                    <option value="946">Kiribati</option>
+                                    <option value="947">Tuvalu</option>
+                                    <option value="950">Fiji</option>
+                                    <option value="955">Tonga</option>
+                                    <option value="970">Nauru</option>
+                                    <option value="983">Marshall Islands</option>
+                                    <option value="986">Palau</option>
+                                    <option value="987">Micronesia (Federated States of)</option>
+                                    <option value="990">Samoa</option>
+                                    <option value="260">Germany</option>
+                                    <option value="679">Yemen</option>
+                                    <option value="341">Montenegro</option>
+                                    <option value="345">Serbia</option>
+                                </select>
+                        </div> <!-- form input -->
+                        <div class="form-input">
+                                <select name="decade" class="form-control" id="sel3">
+                                    <option value="volvo">Select a Period</option>
+                                    <option value="1946-1956">1946-1956</option>
+                                    <option value="1956-1966">1956-1966</option>
+                                    <option value="1966-1976">1966-1976</option>
+                                    <option value="1976-1986">1976-1986</option>
+                                    <option value="1986-1996">1986-1996</option>
+                                    <option value="1996-2006">1996-2006</option>
+                                    <option value="2006-2018">2006-2018</option>
+                                </select>
+                        </div> <!-- form input -->
+                        <div class="col-lg-1 offset-lg-4">
+                            <div class="form-input rounded-buttons" style="margin-top: 10px;">
+                                <button id="similarity_form_submit" style="background-color: #AA0B38;color:white"  type="submit" class="main-btn">Visualize!</button>
+                            </div> <!-- form input -->
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- row -->
+            <div class="row">                
+                <div id="bubble_chart" hidden style="width:600px;height:500px;" class="col-lg-9 col-md-7 col-sm-9">
+                    <div class="pricing-style-one wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        
+                    </div> <!-- pricing style one -->
+                </div>
+                <div id="insigts_stats" hidden class="col-lg-3 col-md-7 col-sm-9">
+                    <div class="pricing-style-one mt-50">
+                        <div class="pricing-header text-center">
+                            <h5 class="sub-title">Average Similarity</h5>
+                            <p style="font-size:16px;" class="month"><span id="avg_similar">% </span></p>
+                        </div>
+                        <div class="pricing-header text-center">
+                            <h5 class="sub-title">Average Trade</h5>
+                            <p style="font-size:16px;" class="month"><span id="avg_trade">$ </span></p>
+                        </div>
+                        <div class="pricing-header text-center">
+                            <h5 class="sub-title">Any Correlation?</h5>
+                            <p style="font-size:16px;" class="month"><span id="correlation_value"></span></p>
+                            <p style="font-size:16px;" class="month"><span id="correlation_statement"></span></p>
+                        </div>
+                    </div> <!-- pricing style one -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">                
+                <div class="col-lg-12">
+                    <div id="similarity_trade_note" hidden class="section-title text-center pb-20">
+                        <p class="text"> <strong>Note</strong></p>
+                        <p class="text">UNGA voting dataset is missing votes record for 1964</p>
+                        <p class="text">Data for trade volumes between countries from 2014-2018 is not included in the dataset</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== PRINICNG STYLE EIGHT ENDS ======-->
+    
+    <!--====== CALL TO ACTION TWO PART START ======-->
+
+    <section id="call-action" class="call-action-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="call-action-content mt-45">
+                        <h3 class="action-title">References</h3>
+                        <br>
+                        <h5>Inspiration</h5>
+                        <br>
+                        <p>https://interactive.aljazeera.com/aje/2019/how-has-my-country-voted-at-unga/</p>
+                        <br>
+                        <h5>Datasets</h5>
+                        <p>-Erik Voeten "Data and Analyses of Voting in the UN General Assembly" Routledge Handbook of International Organization, edited by Bob Reinalda (published May 27, 2013). Available at SSRN: http://ssrn.com/abstract=2111149</p>
+                        <br>
+                        <p>-Barbieri, Katherine and Omar M. G. Omar Keshk. 2016. Correlates of War Project Trade Data Set Codebook, Version 4.0. Online: http://correlatesofwar.org. </p>
+                        <br>
+                        <p>-Barbieri, Katherine, Omar M. G. Keshk, and Brian Pollins. 2009. “TRADING DATA: Evaluating our Assumptions and Coding Rules.” Conflict Management and Peace Science. 26(5): 471-491.</p>
+                        <br>
+                        <h5>Resources</h5>
+                        <p>https://www.vox.com/2018/11/20/18079996/israel-palestine-conflict-guide-explainer</p>
+                        <p>https://www.un.org/disarmament/wmd/nuclear/</p>
+                        <p>https://www.un.org/en/universal-declaration-human-rights/</p>
+                        <p>http://sdg.iisd.org/news/unga-adopts-resolution-on-global-economic-governance/ </p>
+                        <p>https://www.un.org/en/ga/second/70/index.shtml</p>
+                        <p>https://www.un.org/dppa/decolonization/en/about</p>
+                        <br>
+                        <h5>Images</h5>
+                        <p>http://henrydallalphotography.com/exhibitions-events-henry-dallal-2/united-nations-general-assembly-new-york-city/</p>
+
+                    </div> <!-- call action content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CALL TO ACTION TWO PART ENDS ======-->
+        
+    <!--====== FOOTER FOUR PART START ======-->
+
+    <footer id="footer" class="footer-area">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="copyright text-center text-lg-left mt-10">
+                            <p class="text">Template by <a style="color: #AA0B38" rel="nofollow" href="https://uideck.con">UIdeck</a> and Icons from <a style="color: #AA0B38" rel="nofollow" href="https://www.flaticon.com/">Flaticon</a></p>
+                        </div> <!--  copyright -->
+                    </div>
+                    <div class="col-lg-5">
+                        <ul class="social text-center text-lg-right mt-10">
+                            <li><a href="https://www.facebook.com/eyadkht"><i class="lni-facebook-filled"></i></a></li>
+                            <li><a href="https://twitter.com/Eyadkht"><i class="lni-twitter-original"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/eyadkht/"><i class="lni-linkedin-original"></i></a></li>
+                        </ul> <!-- social -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+
+    <!--====== FOOTER FOUR PART ENDS ======-->
+
+    <!--====== PART START ======-->
+
+    <!--====== PART ENDS ======-->
+
+    <script>
+        document.getElementById('similarity_form_submit').addEventListener('click', submitData);
+
+        // window.onload = function() {
+        //     submitData();
+        // };
+    
+    </script>
+
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Isotope js ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!--====== Images Loaded js ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Scrolling js ======-->
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+</body>
+
+</html>
